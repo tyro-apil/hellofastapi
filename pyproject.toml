@@ -7,7 +7,6 @@ dependencies = [
     "fastapi>=0.115.12",
     "pydantic>=2.11.4",
     "streamlit>=1.45.1",
-    "types-requests>=2.32.0.20250328",
     "uvicorn>=0.34.2",
 ]
 
@@ -16,4 +15,5 @@ dev = [
     "mypy>=1.15.0",
     "pre-commit>=4.2.0",
     "ruff>=0.11.9",
+    "types-requests>=2.32.0.20250328",
 ]
