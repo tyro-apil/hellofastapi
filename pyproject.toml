@@ -1,0 +1,6 @@
+[project]
+name = "calc-fastapi"
+version = "0.1.0"
+description = "A simple calculator app using Streamlit and FastAPI"
+requires-python = ">=3.11"
+dependencies = []
