@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 import json
 import requests
@@ -20,5 +22,8 @@ inputs = {"operation": option, "x": x, "y": y}
 
 # When the user clicks the button, it will fetch the API
 if st.button("Calculate"):
-    res = requests.post(url="http://127.0.0.1:8000/calculate", data=json.dumps(inputs))
+    res = requests.post(
+        url=os.environ.get("BACKEND_URL", "http://localhost:8000") + "/calculate",
+        data=json.dumps(inputs),
+    )
     st.subheader(f"Response from API = {res.text}")
