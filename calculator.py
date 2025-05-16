@@ -1,4 +1,7 @@
-def calculate(operation: str, x: float, y: float) -> float:
+from typing import Union
+
+
+def calculate(operation: str, x: float, y: float) -> Union[float, str]:
     """
     Performs basic arithmetic operations on two numbers.
 
@@ -22,8 +25,11 @@ def calculate(operation: str, x: float, y: float) -> float:
     elif operation == "multiply":
         return x * y
     elif operation == "divide":
-        if y == 0:
-            raise ValueError("Cannot divide by zero")
-        return x / y
+        try:
+            if y == 0:
+                raise ZeroDivisionError()
+            return x / y
+        except ZeroDivisionError:
+            return "Cannot divide by zero"
     else:
         raise ValueError(f"Invalid operation: {operation}")
