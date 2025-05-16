@@ -23,3 +23,14 @@ A simple calculator app made using ***streamlit*** for UI and ***fastapi*** for 
     ```shell
     uv run streamlit run stream_lit.py --server.port=8501 --server.address=0.0.0.0
     ```
+
+### 3. Running tests
+1. Calculation tests
+   ```shell
+   uv run pytest -v test_calculator.py
+   ```
+
+2. Endpoint test
+   ```shell
+   uv run pytest -v test_endpoint.py
+   ```
